@@ -85,16 +85,17 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         var node = this;
 
-        this.cellphone = config.cellphone;
-        this.imei = config.imei;
+        // this.cellphone = config.cellphone;
+        // this.imei = config.imei;
 
         this.on("input", function(msg) {
             msg.payload = parseMessage(msg.payload);
-
-            if (this.cellphone == msg.payload.phone || this.imei == msg.payload.imei)
-              node.send(msg);
-            else
-              node.error("Atenção: O número de celular ou IMEI recebidos na mensagem não bate(m) com o informado na configuração.", msg);
+            node.send(msg);
+            
+            // if (this.cellphone == msg.payload.phone || this.imei == msg.payload.imei)
+            //   node.send(msg);
+            // else
+            //   node.error("Atenção: O número de celular ou IMEI recebidos na mensagem não bate(m) com o informado na configuração.", msg);
         });
     }
 

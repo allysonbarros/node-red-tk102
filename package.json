@@ -1,15 +1,16 @@
 
 {
-    "name"          : "node-red-node-random",
+    "name"          : "node-red-node-tk102",
     "version"       : "0.0.1",
-    "description"   : "A Node-RED node that parses the message sent by TK102 GPS Tracker Devices.",
+    "description"   : "A Node-RED nodes for TK102 GPS Tracker Devices.",
     "dependencies"  : {
     },
     "license": "Apache-2.0",
     "keywords": [ "node-red", "tk102-message-parser" ],
     "node-red"      : {
         "nodes"     : {
-            "random": "tk102-message-parser.js"
+            "tk102-message-parser": "tk102-message-parser.js",
+            "tk102-message-validator": "tk102-message-validator.js"
         }
     },
     "author": {
