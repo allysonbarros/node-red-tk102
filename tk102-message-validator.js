@@ -9,7 +9,7 @@ module.exports = function(RED) {
         this.imei = config.imei;
 
         this.on("input", function(msg) {
-            if (this.cellphone == msg.payload.phone || this.imei == msg.payload.imei)
+            if (this.cellphone == msg.payload.phone && this.imei == msg.payload.imei)
               node.send(msg);
             else
               node.error("Atenção: O número de celular ou IMEI recebidos na mensagem não bate(m) com o informado na configuração.", msg);
