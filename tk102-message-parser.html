@@ -4,21 +4,33 @@
 
 <script type="text/x-red" data-template-name="tk102-message-parser">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-cellphone"><i class="fa fa-mobile"></i> Cellphone Number</label>
+        <input type="text" id="node-input-cellphone" placeholder="Cellphone Number">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-imei"><i class="fa fa-cog"></i> IMEI Number</label>
+        <input type="text" id="node-input-imei" placeholder="IMEI Number">
     </div>
 </script>
 
 <script type="text/javascript">
     RED.nodes.registerType('tk102-message-parser',{
         category: 'TK102 GPS Tracker Devices',
-        color:"#E2D96E",
+        color: "#E2D96E",
         defaults: {
-            name: {value:""},
+            name: { value:"TK102 Message Parser" },
+            imei: { value:"084991260424" },
+            cellphone: { value:"013777006342768" }
         },
         inputs:1,
         outputs:1,
-        icon: "debug.png",
+        icon: "white-globe.png",
         label: function() {
             return this.name || "tk102";
         },
