@@ -1,0 +1,19 @@
+
+{
+    "name"          : "node-red-node-random",
+    "version"       : "0.0.1",
+    "description"   : "A Node-RED node that parses the message sent by TK102 GPS Tracker Devices.",
+    "dependencies"  : {
+    },
+    "license": "Apache-2.0",
+    "keywords": [ "node-red", "tk102-message-parser" ],
+    "node-red"      : {
+        "nodes"     : {
+            "random": "tk102-message-parser.js"
+        }
+    },
+    "author": {
+        "name": "Allyson Barros",
+        "email": "allysonbarrosrn@gmail.com"
+    }
+}
