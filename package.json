@@ -13,8 +13,14 @@
             "tk102-message-validator": "tk102-message-validator.js"
         }
     },
-    "author": {
-        "name": "Allyson Barros",
-        "email": "allysonbarrosrn@gmail.com"
-    }
+    "authors": [
+        {
+            "name": "Allyson Barros",
+            "email": "allysonbarrosrn@gmail.com"
+        },
+        {
+            "name": "Welkon Medeiros",
+            "email": "welkson@gmail.com"
+        }
+    ]
 }
