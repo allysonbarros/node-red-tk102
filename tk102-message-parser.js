@@ -38,14 +38,10 @@ module.exports = function(RED) {
         str = raw.split(',');
 
         if(str.length === 18 && str[2] === 'GPRMC' || str.length === 28 && str[2] === 'GPRMC') {
-          console.log(str[0]);
-
           datetime = str[0].replace(/([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})/, function(s0, y, m, d, h, i, s) {
             return '20' + y + '-' + m + '-' + d + ' ' + h + ':' + i + ':' + s;
           });
-
-          console.log(datetime);
-
+          
           gpsdate = str[11].replace(/([0-9]{2})([0-9]{2})([0-9]{2})/, function(s, d, m, y) {
             return '20' + y + '-' + m + '-' + d;
           });
